@@ -1,0 +1,39 @@
+/* SearchForm.module.css */
+.form {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: none;
+  border-bottom: 2px solid #555;
+  background-color: transparent;
+  color: #3d3131;
+  font-size: 16px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.button {
+  padding: 8px 16px;
+  margin-left: 10px; /* space between input and button */
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
