@@ -1,11 +1,23 @@
+import toast, { Toaster } from "react-hot-toast";
+
 import styles from "./SearchBar.module.css";
 
-const SearchBar = () => {
+const SearchBar = ({ onSubmit }) => {
   const handlerSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.elements.text.value);
-    const formValue = e.target.elements.value;
-    resetForm();
+
+    const form = e.target;
+    const { text } = form.elements;
+    if (text.value.trim() === "") {
+      toast.error("Please enter some text", {
+        duration: 4000,
+        position: "top-center",
+        icon: "👀",
+      });
+    }
+    onSubmit(text.value);
+
+    form.reset();
   };
   return (
     <header>
@@ -22,6 +34,7 @@ const SearchBar = () => {
           Search
         </button>
       </form>
+      <Toaster />
     </header>
   );
 };

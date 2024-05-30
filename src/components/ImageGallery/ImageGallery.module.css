@@ -1,0 +1,28 @@
+.ul {
+  margin-top: 30px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.li {
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+
+  height: 100%;
+  width: 300px;
+}
+
+.li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}

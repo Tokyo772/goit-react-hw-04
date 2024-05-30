@@ -1,6 +1,11 @@
 /* SearchForm.module.css */
 .form {
+  width: 600px;
+
+  margin: auto;
+
   display: flex;
+
   align-items: center;
   background-color: transparent;
   border: none;
