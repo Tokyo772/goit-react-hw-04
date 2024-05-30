@@ -1,12 +1,13 @@
+import React from "react";
 import Modal from "react-modal";
 
 Modal.setAppElement("#root");
 
-const ImageModal = () => {
+const ImageModal = ({ isOpen, onRequestClose, selectedImage }) => {
   return (
     <Modal
-      isOpen={modalIsOpen}
-      onRequestClose={closeModal}
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
       style={{
         content: {
           top: "50%",
@@ -17,14 +18,14 @@ const ImageModal = () => {
           transform: "translate(-50%, -50%)",
         },
         overlay: {
-          backgroundColor: "rgba(0, 0, 0, 0.75)",
+          backgroundColor: "rgba(0, 0, 0, 0.90)",
         },
       }}
     >
       {selectedImage && (
         <div>
           <img
-            src={selectedImage.urls.full}
+            src={selectedImage.urls.regular}
             alt={selectedImage.alt_description}
           />
         </div>
